@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>綜合問卷調查表</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 600px; margin: 20px auto; padding: 20px; background-color: #f4f4f9; }
+        form { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        div { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group { display: flex; gap: 15px; align-items: center; }
+        .radio-group label, .checkbox-group label { font-weight: normal; display: inline; }
+        button { background: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>問卷調查表</h2>
+
+    <form action="#">
+        <!-- 文字輸入 (姓名) -->
+        <div>
+            <label for="name">姓名 (Text):</label>
+            <input type="text" id="name" name="name" placeholder="請輸入姓名" required>
+        </div>
+
+        <!-- 電子郵件 (Email) -->
+        <div>
+            <label for="email">電子郵件 (Email):</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <!-- 單選按鈕 (性別) -->
+        <div>
+            <label>性別 (Radio):</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">男</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">女</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">其他</label>
+            </div>
+        </div>
+
+        <!-- 興趣愛好 (Text) -->
+        <div>
+            <label for="hobbies">興趣愛好 (Text):</label>
+            <input type="text" id="hobbies" name="hobbies" placeholder="例如：慢跑、閱讀、攝影">
+        </div>
+
+        <!-- 下拉選單 (工作) -->
+        <div>
+            <label for="job">職業 (Select):</label>
+            <select id="job" name="job">
+                <option value="">請選擇職業</option>
+                <option value="student">學生</option>
+                <option value="engineer">工程師</option>
+                <option value="designer">設計師</option>
+                <option value="other">其他</option>
+            </select>
+        </div>
+
+        <!-- 日期選擇 (出生日期) -->
+        <div>
+            <label for="birthday">出生日期 (Date):</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+
+        <!-- 顏色選擇 (喜歡的顏色) -->
+        <div>
+            <label for="color">喜歡的顏色 (Color):</label>
+            <input type="color" id="color" name="color" value="#007BFF" style="height: 40px; width: 100px;">
+        </div>
+
+        <!-- 電話 (Tel) -->
+        <div>
+            <label for="phone">電話 (Tel):</label>
+            <input type="tel" id="phone" name="phone" placeholder="0912-345678">
+        </div>
+
+        <!-- 多行文字 (留言) -->
+        <div>
+            <label for="message">留言 (Textarea):</label>
+            <textarea id="message" name="message" rows="4" placeholder="請輸入您的意見..."></textarea>
+        </div>
+
+        <button type="submit">提交問卷</button>
+    </form>
+
+</body>
+</html>
