@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>貪吃蛇遊戲專案報告 - AI輔助學習專案</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Microsoft JhengHei", Arial, sans-serif; background: #1a1a2e; color: #fff; overflow: hidden; }
+    
+    .slide {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      padding: 60px 80px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .slide.active { display: flex; }
+    
+    h1 { font-size: 3.5rem; margin-bottom: 30px; color: #00ff88; }
+    h2 { font-size: 2.5rem; margin-bottom: 25px; color: #00ff88; }
+    p { font-size: 1.5rem; line-height: 1.8; color: #ccc; margin-bottom: 20px; }
+    li { font-size: 1.4rem; line-height: 2; color: #ccc; margin-left: 40px; }
+    
+    .title-slide { text-align: center; background: linear-gradient(135deg, #1a1a2e, #16213e); }
+    .title-slide h1 { font-size: 4rem; }
+    .title-slide .subtitle { font-size: 1.8rem; color: #667eea; margin-top: 20px; }
+    .title-slide .author { font-size: 1.2rem; color: #888; margin-top: 60px; }
+    
+    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .card { background: #0a0a1a; padding: 30px; border-radius: 12px; border: 1px solid #00ff88; }
+    .card h3 { color: #00ff88; font-size: 1.5rem; margin-bottom: 15px; }
+    .card p { font-size: 1.1rem; }
+    
+    .tech-badge { display: inline-block; background: #00ff88; color: #1a1a2e; padding: 8px 20px; border-radius: 20px; margin: 5px; font-weight: bold; }
+    .ai-badge { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 8px 20px; border-radius: 20px; margin: 5px; }
+    
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: flex;
+      gap: 10px;
+    }
+    .nav button {
+      background: #00ff88;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .page-num {
+      position: fixed;
+      bottom: 35px;
+      left: 30px;
+      color: #666;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 投影片 1: 標題 -->
+<div class="slide title-slide active">
+  <h1>🐍 貪吃蛇遊戲</h1>
+  <p class="subtitle">AI 輔助學習專案報告</p>
+  <p class="author">報告人：林峻德</p>
+</div>
+
+<!-- 投影片 2: 專案概述 -->
+<div class="slide">
+  <h2>📋 專案概述</h2>
+  <div class="content-grid">
+    <div class="card">
+      <h3>專案目標</h3>
+      <p>學習 Node.js 後端開發<br>學習 HTML5 Canvas 遊戲開發<br>使用 AI 輔助程式開發工具</p>
+    </div>
+    <div class="card">
+      <h3>功能特色</h3>
+      <p>🐍 經典貪吃蛇遊戲<br>📊 分數/等級/速度系統<br>🏆 排行榜功能<br>🎮 流暢鍵盤控制</p>
+    </div>
+  </div>
+</div>
+
+<!-- 投影片 3: 技術架構 -->
+<div class="slide">
+  <h2>🛠️ 技術架構</h2>
+  <p>本專案使用以下技術：</p>
+  <div style="margin-top: 30px;">
+    <span class="tech-badge">HTML5 Canvas</span>
+    <span class="tech-badge">JavaScript ES6+</span>
+    <span class="tech-badge">Node.js</span>
+    <span class="tech-badge">Express</span>
+    <span class="tech-badge">REST API</span>
+  </div>
+  <div class="card" style="margin-top: 30px;">
+    <h3>系統架構</h3>
+    <p>玩家瀏覽器 → Node.js 後端 (Port 4000) → 遊戲 API / 排行榜</p>
+  </div>
+</div>
+
+<!-- 投影片 4: AI 工具應用 -->
+<div class="slide">
+  <h2>🤖 AI 輔助工具</h2>
+  <p>本專案使用以下 AI 工具輔助開發：</p>
+  <div style="margin-top: 20px;">
+    <span class="ai-badge">ChatGPT</span>
+    <span class="ai-badge">Claude</span>
+  </div>
+  <div class="content-grid" style="margin-top: 30px;">
+    <div class="card">
+      <h3>ChatGPT 用途</h3>
+      <p>• 程式碼生成<br>• 遊戲邏輯撰寫<br>• 除錯輔助</p>
+    </div>
+    <div class="card">
+      <h3>Claude 用途</h3>
+      <p>• 程式碼審查<br>• 優化建議<br>• 程式碼分析</p>
+    </div>
+  </div>
+</div>
+
+<!-- 投影片 5: AI 使用技巧 -->
+<div class="slide">
+  <h2>💡 AI 使用技巧</h2>
+  <ul>
+    <li><strong>清楚描述需求</strong> - 指定技術棧、功能需求</li>
+    <li><strong>驗證程式碼</strong> - 理解每行程式碼用途</li>
+    <li><strong>持續學習</strong> - 比較 AI 方案與自己的想法</li>
+    <li><strong>有效提問</strong> - 提供錯誤訊息請 AI 除錯</li>
+  </ul>
+</div>
+
+<!-- 投影片 6: 遊戲功能 -->
+<div class="slide">
+  <h2>🎮 遊戲功能</h2>
+  <ul>
+    <li>20x20 網格遊戲區域</li>
+    <li>方向鍵 / WASD 控制移動</li>
+    <li>空格鍵暫停/繼續</li>
+    <li>吃到食物加分並變長</li>
+    <li>每 50 分升一等級，速度加快</li>
+    <li>撞牆或撞自己遊戲結束</li>
+    <li>顯示分數、等級、速度</li>
+  </ul>
+</div>
+
+<!-- 投影片 7: API 接口 -->
+<div class="slide">
+  <h2>🔌 API 接口</h2>
+  <div class="card">
+    <h3>遊戲排行榜 API</h3>
+    <p>POST /api/game/submit - 提交分數<br>
+    GET /api/game/leaderboard - 獲取排行榜</p>
+  </div>
+  <div class="card" style="margin-top: 20px;">
+    <h3>健康檢查</h3>
+    <p>GET /api/health - 檢查伺服器狀態</p>
+  </div>
+</div>
+
+<!-- 投影片 8: 學習心得 -->
+<div class="slide">
+  <h2>📝 學習心得</h2>
+  <ul>
+    <li>掌握 Node.js + Express 後端開發</li>
+    <li>學會 HTML5 Canvas 遊戲開發</li>
+    <li>了解 REST API 設計與實作</li>
+    <li>學會使用 AI 輔助程式開發</li>
+    <li>理解遊戲邏輯與碰撞檢測</li>
+  </ul>
+</div>
+
+<!-- 投影片 9: 總結 -->
+<div class="slide">
+  <h2>📌 總結</h2>
+  <div class="content-grid">
+    <div class="card">
+      <h3>專案成果</h3>
+      <p>✅ 完整運作的貪吃蛇遊戲<br>✅ Node.js 後端 API<br>✅ 技術報告與學習筆記</p>
+    </div>
+    <div class="card">
+      <h3>AI 應用</h3>
+      <p>✅ 使用 ChatGPT 生成程式碼<br>✅ 使用 Claude 審查優化<br>✅ AI 輔助開發流程</p>
+    </div>
+  </div>
+  <p style="margin-top: 40px; text-align: center; color: #00ff88;">謝謝觀看！</p>
+</div>
+
+<div class="page-num"><span id="pageNum">1</span> / 9</div>
+
+<div class="nav">
+  <button onclick="prevSlide()">◀ 上一頁</button>
+  <button onclick="nextSlide()">下一頁 ▶</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  
+  function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+    document.getElementById('pageNum').textContent = currentSlide + 1;
+  }
+  
+  function nextSlide() { showSlide(currentSlide + 1); }
+  function prevSlide() { showSlide(currentSlide - 1); }
+  
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+</script>
+
+</body>
+</html>
