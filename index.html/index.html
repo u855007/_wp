@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林峻德的網頁設計課程成果發表</title>
+    <style>
+        body {
+            font-family: Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table td {
+            padding: 10px;
+            font-size: 1.05rem;
+        }
+        .info-table td strong {
+            color: #2c3e50;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .hw-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .hw-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .hw-badge {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        .hw-card.midterm .hw-badge {
+            background-color: #e74c3c;
+        }
+        .hw-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .hw-content h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+        .hw-content p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .hw-action {
+            padding: 15px 20px;
+            background-color: #fafbfc;
+            border-top: 1px solid #eee;
+            text-align: right;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #3498db;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 60px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>網頁設計課程成果發表</h1>
+        <p>國立金門大學 資訊工程學系 — 課程習題與專案成果總覽</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- 學生基本資料區 -->
+        <div class="info-card">
+            <table class="info-table">
+                <tr>
+                    <td><strong>學期：</strong>114 學年下學期</td>
+                    <td><strong>學生：</strong>林峻德</td>
+                    <td><strong>學號末兩碼：</strong>31</td>
+                </tr>
+                <tr>
+                    <td><strong>指導教授：</strong>陳鍾誠 老師</td>
+                    <td colspan="2"><strong>全域宣告：</strong>本專案各習題開發歷程均如實記錄於對應目錄之 README.md 中。</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 習題卡片展示網格 -->
+        <div class="grid">
+
+            <!-- HW1 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 01</span></div>
+                <div class="hw-content">
+                    <h3>個人資訊網頁</h3>
+                    <p>學習 HTML5 語法結構與基礎內置 CSS 排版，建立包含了基本資料、頭像與自我介紹的個人基本網頁。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/tree/main/01" target="_blank" class="btn">線上檢視網頁 →</a>
+                </div>
+            </div>
+
+            <!-- HW2 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 02</span></div>
+                <div class="hw-content">
+                    <h3>綜合問卷調查表單</h3>
+                    <p>設計包含多種輸入控制項的問卷表單，練習了文字、單選、多選、下拉選單及日期選擇器等元件排版。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/blob/main/homework/02" target="_blank" class="btn">瀏覽作業目錄 →</a>
+                </div>
+            </div>
+
+            <!-- HW3 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 03</span></div>
+                <div class="hw-content">
+                    <h3>第一個 JavaScript 程式</h3>
+                    <p>JavaScript 環境入門。編寫基礎的 hello.js 檔案，並成功在 Node.js 後端環境的終端機中正確執行字串輸出。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/blob/master/homework/js/hello.js" target="_blank" class="btn">檢視程式碼 →</a>
+                </div>
+            </div>
+
+            <!-- HW4 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 04</span></div>
+                <div class="hw-content">
+                    <h3>JavaScript 10 大程式核心挑戰</h3>
+                    <p>包含偶數篩選、階層計算、倒數計時器、字串反轉、物件深拷貝及數字猜測邏輯等 10 個核心練習程式碼與執行結果。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/tree/master/homework/04" target="_blank" class="btn">檢視 10 題程式 →</a>
+                </div>
+            </div>
+
+            <!-- HW5 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 05</span></div>
+                <div class="hw-content">
+                    <h3>OpenCode 網站專案演進</h3>
+                    <p>實作網誌部落格系統，分階段儲存為多個漸進演進版本，包含 blog-simple、blog-user 到完整 blog 網站專案。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/tree/master/homework/05-opencode" target="_blank" class="btn">進入專案演進 →</a>
+                </div>
+            </div>
+
+            <!-- HW6 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 06</span></div>
+                <div class="hw-content">
+                    <h3>JS 函數與參數 10 題練習解答</h3>
+                    <p>深入練習 JavaScript 函數核心，包含箭頭函數、Callback 傳遞、不定參數等 10 個函數專屬的程式解答。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/tree/main/homework/06" target="_blank" class="btn">檢視函數解答 →</a>
+                </div>
+            </div>
+
+            <!-- HW7 -->
+            <div class="hw-card">
+                <div><span class="hw-badge">習題 07</span></div>
+                <div class="hw-content">
+                    <h3>解構與網誌必備 JS 練習</h3>
+                    <p>針對部落格/網誌系統量身打造的 10 題進階練習，深入探討物件解構賦值、陣列迭代（forEach）與高階邏輯。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/tree/main/homework/07" target="_blank" class="btn">檢視核心語法 →</a>
+                </div>
+            </div>
+
+            <!-- Midterm -->
+            <div class="hw-card midterm">
+                <div><span class="hw-badge">期中專案</span></div>
+                <div class="hw-content">
+                    <h3>AI 輔助貪吃蛇遊戲學習專案</h3>
+                    <p>大整合專案！結合 Node.js 後端 API 排行榜與 HTML5 Canvas 遊戲開發，內含完整技術報告、學習筆記與對話紀錄。</p>
+                </div>
+                <div class="hw-action">
+                    <a href="https://github.com/u855007/_wp/tree/main/snakereport
+                    " target="_blank" class="btn">進入專案報告 →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 林峻德 (學號末兩碼: 31) 個人作業展示牆 · 連結已精確與 GitHub 專案同步</p>
+    </footer>
+
+</body>
+</html>
