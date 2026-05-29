@@ -33,7 +33,7 @@ npm run dev
 
 # 2. 開啟遊戲
 # 直接用瀏覽器打開 snake-game/index.html
-# 或訪問 http://localhost:4000/snake-game/index.html
+# 或訪問 https://wp-weld-two.vercel.app/
 ```
 
 ## 🎮 遊戲操作
