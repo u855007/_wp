@@ -293,7 +293,7 @@
     document.addEventListener('keydown', e => {
       const key = e.key.toLowerCase();
       
-      if (key === ' ' || key === 'pause') {
+      if (key === ' ' || key === 'spacebar') {
         e.preventDefault();
         isPaused = !isPaused;
         return;
@@ -305,29 +305,21 @@
         case 'arrowup':
         case 'w':
           if (direction.y !== 1) nextDirection = { x: 0, y: -1 };
-          e.preventDefault();
           break;
         case 'arrowdown':
         case 's':
           if (direction.y !== -1) nextDirection = { x: 0, y: 1 };
-          e.preventDefault();
           break;
         case 'arrowleft':
         case 'a':
           if (direction.x !== 1) nextDirection = { x: -1, y: 0 };
-          e.preventDefault();
           break;
         case 'arrowright':
         case 'd':
           if (direction.x !== -1) nextDirection = { x: 1, y: 0 };
-          e.preventDefault();
           break;
       }
     });
-    
-    // 初始化顯示
-    initGame();
-    draw();
   </script>
 </body>
 </html>
